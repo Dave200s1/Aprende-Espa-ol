@@ -1,0 +1,25 @@
+[
+    {
+        "name" : "Lin",
+        "rating" : 5,
+        "text" : "Fantastische Plattform!",
+        "comment" : "Ich hätte nie gedacht, dass Spanisch lernen so viel Spaß machen kann! Die kurzen Lektionen passen perfekt in meinen Alltag und ich merke richtig schnell Fortschritte.Besonders die Übungen mit Hörverstehen sind super",
+        "id": "studentLin",
+        "img": "imgs/student1.webp",
+        "img_320w": "imgs/student1.webp",
+        "img_640w": "imgs/student1.webp", 
+        "img_1000w": "imgs/student1.webp"
+    },
+    {
+        "name" : "Max",
+        "rating" : 4,
+        "text" : "Sehr gut für Anfänger.",
+        "comment" : "Sehr gute Plattform, um Spanisch von Grund auf zu lernen. Alles ist verständlich erklärt und man bekommt sofort Feedback. Die Videos sind hilfreich und machen das Lernen abwechslungsreich.",
+        "id": "studentMax",
+        "img": "imgs/student2.webp",
+        "img_320w": "imgs/student2.webp",
+        "img_640w": "imgs/student2.webp", 
+        "img_1000w": "imgs/student2.webp"
+    }
+
+]

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stats>
+    <stat>
+        <value>2000+</value>
+        <label>Aktive Lerner</label>
+    </stat>
+    <stat>
+        <value>78%</value>
+        <label>Erfolgsquote</label>
+    </stat>
+    <stat>
+        <value>24/7</value>
+        <label>Verfügbarkeit</label>
+    </stat>
+</stats>

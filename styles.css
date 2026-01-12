@@ -1,0 +1,700 @@
+@font-face {
+    font-family: Cabin;
+    src: url("fonts/CabinRegular-G0GO.ttf");
+    font-display: swap;
+}
+/*FontQuelle: fontspace.com*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cabin, sans-serif;
+}
+
+:root{
+    --primary-colour: #34dbb1;
+    --seconday-colour: #333;
+    --text-colour: #111;
+    --background-colour: #f0f2f0;
+    --font-size-base: 16px;
+}
+
+
+html, body{
+    background-color: #fff;
+}
+
+
+nav{
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    background-color: var(--background-colour);
+    z-index: 1000;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 95px;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links img{
+    width: 45px;
+}
+
+.nav-links img:hover{
+    cursor: pointer;
+}
+
+.nav-links a{
+    display: block;
+    padding: 20px 15px;
+    color: var(--text-colour);
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: all ease-in 0.3s;
+    margin: 15px;
+}
+
+.nav-links a:hover{
+    background-color: var(--primary-colour);
+    color: #fff;
+    border-radius: 5%;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+    width: 34px;
+}
+
+.hamburger .bar{
+    flex-basis: 100%;
+    height: 4px;
+    background-color: #111;
+    margin: 3px;
+}
+
+.has-submenu{
+    position: relative;
+    align-items: center;
+}
+
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    min-width: 180px;
+}
+
+.submenu li a{
+    padding: 12px 15px;
+    white-space: nowrap;
+}
+
+.has-submenu:hover .submenu{
+    display: block;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3);
+}
+
+
+#slider {
+    transition: opacity 1s ease-in-out;
+}
+
+
+
+.WelcomeScreen{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 0 10%;
+    backdrop-filter: blur(70px);
+    justify-content: flex-start;
+    color: #fff;
+}
+
+.WelcomeScreen .content{
+    max-width: 600px;
+    width: 100%;
+    margin: 25px;
+    z-index: 1;
+} 
+
+.WelcomeScreen .content h1{
+    display: inline-block;
+    max-width: none; 
+    color: #fff;
+    font-size: 85px;
+    margin-left: 95%;
+    line-break: none;
+    line-height: 0.80;
+    margin-bottom: 1rem;
+    background-color: var(--primary-colour);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    border-radius: 25px;     
+    padding: 20px 90px;  
+} 
+
+.WelcomeScreen .content .p{
+    max-width: 100%;
+    color: var(--text-colour);
+    font-size: 22px;
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 0 4px;
+}
+
+.WelcomeScreen .content .infobox{
+    display: inline-block;
+
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    border-radius: 25px;   
+    max-width: 700px;
+    color: var(--text-colour);
+    margin: 25px 0px 12px 20px;
+    line-height: 1.5;
+    font-size: 25px;
+    padding: 20px 40px;
+} 
+
+.startBtn {
+    text-decoration: none;
+    margin: 20px 0 0px 20px;
+    background-color: var(--primary-colour);
+    border-radius: 35px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #fff;
+    width: 30px;
+    padding: 8px 25px;
+    outline: none;
+    font-weight: bold;
+}
+
+.startBtn:hover{
+    background-color: #000;
+    transition: all ease-in 0.3s;
+}
+
+
+.WarumSpanischLernen{
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--background-colour) ;
+    color: var(--text-colour);
+    
+}
+
+.WarumSpanischLernen h3{
+    font-size: 40px;
+}
+
+.InfoPic1{
+    flex: 1;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+/*MediaQuery*/
+@media (max-width:600px){
+    .InfoPic1{
+        max-width: 300px;
+    }
+}
+
+@media (max-width:1000px){
+    .InfoPic1{
+        max-width: 600px;
+    }
+}
+
+.InfoOne p{
+    font-size: 35px;
+    margin: 25px;
+    line-height: 1.3;
+}
+
+.SprecheFließen{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    padding: 2rem;
+    background: linear-gradient(to bottom,var(--background-colour),var(--primary-colour));
+}
+
+.SprecheFließen{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--seconday-colour);
+    margin: 0px 0 20px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.InfoLeft{
+    position: relative;
+    z-index: 2;
+}
+
+.InfoLeft h3{
+    margin-top: 20px;
+}
+
+.IphonePic {
+  position: absolute;
+  top: -20px;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  object-fit: cover;   
+  z-index: 1;         
+  width: 1550px;
+}
+
+.LadeHerunterHeader{
+    position: relative;
+    left: 230%;
+    top: -20px;
+}
+
+.appStores{
+    left: 230%;
+    position: relative;
+    display: flex;
+    gap: 50px;
+}
+
+.AndroidPic{
+    width: 100px;
+    height: 95px;
+}
+
+.IosPic{
+    width: 100px;
+    height: 95px;
+}
+
+
+.speachBubble{
+    width: 90px;
+}
+
+.Feedback h3{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    color: var(--text-colour);
+    padding: 5%;
+}
+
+.Feedback p{
+    text-align: center;
+    font-size: 35px;
+}
+
+
+.bewertungen {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 35px;
+    top: 0;
+    left: 0;
+    position: relative;
+    
+}
+
+#studentLin{
+    margin: 20px 0 25px 12px;
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#studentMax{
+    margin: 20px 0 25px 12px;
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.Kunde{
+    background-color: #000;
+    color: wheat;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.Kunde h4{
+    width: 80px;
+    font-size: 120px;
+}
+
+.Kunde p{
+    margin-top: 15px;
+    padding: 25px;
+    font-size: 25px;
+}
+
+
+.InfoOne{
+    display: flex;
+    padding: 20px 40px;
+    margin: 20px 0 25px 5px;
+}
+
+
+
+footer{
+    padding-top: 50px;
+    background: var(--seconday-colour);
+}
+
+
+.container {
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container h5{
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.container p{
+    color: #fff;
+    width: 190px;
+    margin: auto;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.footer-content-links ul{
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+}
+
+.footer-content-links .list{
+   padding: 0;
+}
+
+/*Social*/
+.footer-content-social li{
+    list-style: none;
+    cursor: pointer;
+}
+
+.footer-content-links li a:hover{
+    color: var(--primary-colour);
+}
+
+.footer-content-social li i:hover{
+    color: var(--primary-colour);
+}
+
+/*Links*/
+.footer-content-links .list li{
+    list-style: none;
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 6px;
+    position: relative;
+    cursor: pointer;
+}
+
+/*Social*/
+.footer-content-social i{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    margin: 5px;
+}
+
+.legalmenu{
+    text-align: center;
+    margin: 60px 0 10px 0;
+    justify-content: space-between;
+}
+
+.legalmenu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.legalmenu li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.legalmenu a{
+    text-decoration: none;
+    color: white;
+}
+
+.legalmenu a:hover{
+    color: var(--primary-colour);
+}
+
+.list a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.bottom-bar{
+    background-color: #34dbb1;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+.bottom-bar p{
+    color: #000;
+    margin: 0;
+    font-size: 20px ;
+}
+
+/*Mobile Design*/
+@media (max-width: 768px){
+    .nav-links.open {
+        display: block;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+    }
+
+
+
+    .has-submenu.open .submenu {
+        display: block;
+    }
+
+    nav{
+        flex-wrap: wrap;
+    }
+
+    .hamburger{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .hamburger:hover{
+        cursor: pointer;
+    }
+
+    .logo{
+        height: 80px;
+    }
+
+    .nav-links{
+        display: none;
+        flex-basis:100%;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .nav-links a:hover{
+        background-color: var(--primary-colour);
+        color: #fff;
+        border-radius: 25px;
+    }
+
+    .WelcomeScreen{
+        visibility: hidden;
+        margin: 0px;
+        overflow: hidden;
+        display: none;
+        padding: 0;
+
+    }
+
+    .WarumSpanischLernen{
+        display: flow-root;
+    }
+
+    .WarumSpanischLernen h3{
+        font-size: 30px;
+    }
+    
+    .WarumSpanischLernen p{
+        font-size: 20px;
+        line-height: 1.4rem;
+        padding: 2px;
+    }
+
+    .WarumSpanischLernen .InfoOne{
+        display: inline;
+    }
+
+    .WarumSpanischLernen .InfoPic1{
+        width: 300px;
+    }
+
+
+    .Feedback h3{
+        font-size: 30px;
+    }
+
+    .Feedback p{
+        font-size: 20px;
+        line-height: 1.4rem;
+        padding: 2px;
+    }
+
+    .Feedback .bewertungen{
+        display: flow-root;
+    }
+
+
+
+    footer .container{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    footer .container .footer-content-social .linksSocial{
+        display: flex;
+    }
+
+    footer .container ul li a{
+        font-size: 15px;
+    }
+
+    footer  .legalmenu ul li a{
+        font-size: 15px;
+    }
+    
+    footer  .bottom-bar p{
+        font-size: 15px;
+    }
+
+}
+
+/*Print Ansicht*/
+
+@media print{
+    /*Unwichtige elemente*/
+    nav, .hamburger, .startBtn, .appStores,
+    .footer-content-social, .legalmenu,
+    button, .dark-mode-toggle{
+        display: none !important;
+    }
+
+    .IphonePic, .speachBubble, .AndroidPic, .IosPic {
+        display: none !important;
+    }
+    /* Grundlegende Druckoptimierungen */
+    body {
+        color: #000 !important;
+        background: #fff !important;
+        font-size: 12pt !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Links im Druck sichtbar machen */
+    a {
+        color: #000 !important;
+        text-decoration: underline !important;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        font-weight: normal;
+    }
+    
+    /* Hintergrundbilder ausblenden */
+    .WelcomeScreen {
+        background-image: none !important;
+        color: #000 !important;
+        min-height: auto !important;
+        padding: 0 !important;
+    }
+    
+    .WelcomeScreen .content h1 {
+        color: #000 !important;
+        background: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* Bessere Seitenumbrüche */
+    section {
+        page-break-inside: avoid;
+        margin: 2cm 0 !important;
+    }
+    
+    /* Bilder optimieren */
+    img {
+        height: auto !important;
+        filter: grayscale(100%) !important;
+    }
+    
+    /* Footer anpassen */
+    footer {
+        border-top: 1px solid #000;
+        page-break-before: always;
+    }
+    
+    /* Container für Druck */
+    .container {
+        display: block !important;
+        width: 100% !important;
+    }
+
+}
