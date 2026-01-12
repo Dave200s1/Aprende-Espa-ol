@@ -8,10 +8,10 @@
 
 Eine vollständig responsive, moderne Webanwendung zum Spanischlernen mit interaktiven Features, dynamischen Inhalten und Dark Mode. Dieses Projekt wurde im Rahmen des **WEB-Moduls** meines Studiums entwickelt und demonstriert die Umsetzung moderner Frontend-Technologien.
 
-![Website Preview](Pic1.jpg) 
+![Website Preview](Pic1.png) 
 
-![Website Preview](Pic2.jpg) 
-![Mobile Ansicht](Pic3.jpg) 
+![Website Preview](Pic2.png) 
+![Mobile Ansicht](Pic3.png) 
 
 ## ✨ Features
 
